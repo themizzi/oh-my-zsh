@@ -79,10 +79,10 @@ if [[ "$TERM" != "dumb" ]] && [[ "$DISABLE_LS_COLORS" != "true" ]]; then
   ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg_bold[yellow]%} ═"
   ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg_bold[cyan]%} ✭"
 
-  ZSH_THEME_SVN_PROMPT_ADDITIONS="%{$fg_bold[green]%} +"
+  ZSH_THEME_SVN_PROMPT_ADDITIONS="%{$fg_bold[green]%} ✚"
   ZSH_THEME_SVN_PROMPT_DELETIONS="%{$fg_bold[red]%} ✖"
-  ZSH_THEME_SVN_PROMPT_MODIFICATIONS="%{$fg_bold[blue]%} ✎"
-  ZSH_THEME_SVN_PROMPT_REPLACEMENTS="%{$fg_bold[magenta]%} ∿"
+  ZSH_THEME_SVN_PROMPT_MODIFICATIONS="%{$fg_bold[blue]%} ✹"
+  ZSH_THEME_SVN_PROMPT_REPLACEMENTS="%{$fg_bold[magenta]%} ➜"
   ZSH_THEME_SVN_PROMPT_UNTRACKED="%{$fg_bold[cyan]%} ?"
   ZSH_THEME_SVN_PROMPT_DIRTY="%{$fg_bold[yellow]%} !"
 else 
