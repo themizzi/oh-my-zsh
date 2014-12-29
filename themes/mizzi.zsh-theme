@@ -11,17 +11,17 @@ function is_svn() {
 
 function vcs_prompt_info() {
   if is_git; then
-    echo $(git_prompt_info)
+    echo "$(git_prompt_info)"
   elif is_svn; then
-    echo $(svn_prompt_info)
+    echo "$(svn_prompt_info)"
   fi
 }
 
 function vcs_prompt_status() {
   if is_git; then
-    echo " $(git_prompt_status)"
+    echo $(git_prompt_status)
   elif is_svn; then
-    echo " $(svn_status_info)"
+    echo $(svn_status_info)
   fi
 }
 
