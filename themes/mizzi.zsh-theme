@@ -19,9 +19,9 @@ function vcs_prompt_info() {
 
 function vcs_prompt_status() {
   if is_git; then
-    echo $(git_prompt_status)
+    echo " $(git_prompt_status)"
   elif is_svn; then
-    echo $(svn_status_info)
+    echo " $(svn_status_info)"
   fi
 }
 
@@ -60,7 +60,7 @@ if [[ "$TERM" != "dumb" ]] && [[ "$DISABLE_LS_COLORS" != "true" ]]; then
   MODE_INDICATOR="%{$fg_bold[red]%}❮%{$reset_color%}%{$fg[red]%}❮❮%{$reset_color%}"
   local return_status="%{$fg[red]%}%(?..⏎)%{$reset_color%}"
   
-  PROMPT='%{$fg_bold[green]%}➜ %{$fg_bold[cyan]%}%1~ $(vcs_prompt_info) %(!.%{$fg_bold[red]%}#.%{$fg_bold[green]%}❯)%{$reset_color%} '
+  PROMPT='%{$fg_bold[green]%}➜ %{$fg_bold[cyan]%}%1~$(vcs_prompt_info) %(!.%{$fg_bold[red]%}#.%{$fg_bold[green]%}❯)%{$reset_color%} '
 
   ZSH_THEME_GIT_PROMPT_PREFIX=" %{$fg[blue]%}git%{$reset_color%}:%{$fg[red]%}"
   ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
