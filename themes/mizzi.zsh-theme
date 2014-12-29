@@ -60,7 +60,7 @@ if [[ "$TERM" != "dumb" ]] && [[ "$DISABLE_LS_COLORS" != "true" ]]; then
   MODE_INDICATOR="%{$fg_bold[red]%}❮%{$reset_color%}%{$fg[red]%}❮❮%{$reset_color%}"
   local return_status="%{$fg[red]%}%(?..⏎)%{$reset_color%}"
   
-  PROMPT='%{$fg[cyan]%}%1~ $(vcs_prompt_info) %(!.%{$fg_bold[red]%}#.%{$fg_bold[green]%}❯)%{$reset_color%} '
+  PROMPT='%{$fg_bold[green]%}➜ %{$fg_bold[cyan]%}%1~ $(vcs_prompt_info) %(!.%{$fg_bold[red]%}#.%{$fg_bold[green]%}❯)%{$reset_color%} '
 
   ZSH_THEME_GIT_PROMPT_PREFIX=" %{$fg[blue]%}git%{$reset_color%}:%{$fg[red]%}"
   ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
@@ -72,19 +72,19 @@ if [[ "$TERM" != "dumb" ]] && [[ "$DISABLE_LS_COLORS" != "true" ]]; then
 
   RPROMPT='${return_status}$(vcs_prompt_status)%{$reset_color%}'
 
-  ZSH_THEME_GIT_PROMPT_ADDED="%{$fg[green]%} ✚"
-  ZSH_THEME_GIT_PROMPT_MODIFIED="%{$fg[blue]%} ✹"
-  ZSH_THEME_GIT_PROMPT_DELETED="%{$fg[red]%} ✖"
-  ZSH_THEME_GIT_PROMPT_RENAMED="%{$fg[magenta]%} ➜"
-  ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[yellow]%} ═"
-  ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[cyan]%} ✭"
+  ZSH_THEME_GIT_PROMPT_ADDED="%{$fg_bold[green]%} ✚"
+  ZSH_THEME_GIT_PROMPT_MODIFIED="%{$fg_bold[blue]%} ✹"
+  ZSH_THEME_GIT_PROMPT_DELETED="%{$fg_bold[red]%} ✖"
+  ZSH_THEME_GIT_PROMPT_RENAMED="%{$fg_bold[magenta]%} ➜"
+  ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg_bold[yellow]%} ═"
+  ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg_bold[cyan]%} ✭"
 
-  ZSH_THEME_SVN_PROMPT_ADDITIONS="%{$fg[green]%} +"
-  ZSH_THEME_SVN_PROMPT_DELETIONS="%{$fg[red]%} ✖"
-  ZSH_THEME_SVN_PROMPT_MODIFICATIONS="%{$fg[blue]%} ✎"
-  ZSH_THEME_SVN_PROMPT_REPLACEMENTS="%{$fg[magenta]%} ∿"
-  ZSH_THEME_SVN_PROMPT_UNTRACKED="%{$fg[cyan]%} ?"
-  ZSH_THEME_SVN_PROMPT_DIRTY="%{$fg[yellow]%} !"
+  ZSH_THEME_SVN_PROMPT_ADDITIONS="%{$fg_bold[green]%} +"
+  ZSH_THEME_SVN_PROMPT_DELETIONS="%{$fg_bold[red]%} ✖"
+  ZSH_THEME_SVN_PROMPT_MODIFICATIONS="%{$fg_bold[blue]%} ✎"
+  ZSH_THEME_SVN_PROMPT_REPLACEMENTS="%{$fg_bold[magenta]%} ∿"
+  ZSH_THEME_SVN_PROMPT_UNTRACKED="%{$fg_bold[cyan]%} ?"
+  ZSH_THEME_SVN_PROMPT_DIRTY="%{$fg_bold[yellow]%} !"
 else 
   MODE_INDICATOR="❮❮❮"
   local return_status="%(?::⏎)"
